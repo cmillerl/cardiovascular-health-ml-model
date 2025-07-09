@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #2b2d42ff;
+    --secondary-color: #8d99aeff;
+    --tertiary-color: #edf2f4ff; 
+    --quaternary-color: #ef233cff;
+    --quinary-color: #d90429ff;
+    --text-color: #2b2d42ff;
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--tertiary-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.titles {
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.prediction-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid var(--secondary-color);
+}
+
+.label-form {
+    display: block;
+    margin: 10px;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.input-form {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-form:focus {
+    outline: none;
+    border-color: var(--quaternary-color);
+    background-color: white;
+}
+
+.group-form {
+    margin-bottom: 0;
+}
+
+/* Radio button styling */
+input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--quaternary-color);
+}
+
+.radio-label {
+    margin: 0;
+    padding: 8px 12px;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.radio-label:hover {
+    background-color: var(--tertiary-color);
+    transform: translateY(-1px);
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+/* Medical disclaimer styling */
+.form-note {
+    background-color: #fff3cd;
+    border: 2px solid var(--quaternary-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--primary-color);
+}
+
+.form-note strong {
+    color: var(--quaternary-color);
+    font-weight: 700;
+}
+
+.button-submit {
+    background-color: var(--quinary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-submit:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
+
+.prediction-result {
+    margin-top: 20px;
+    font-weight: bolder;
+}

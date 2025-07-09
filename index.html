@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Disease Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="titles">Cardiovascular Disease Predictor</h1>
+    <div class="container-form">
+        <form class="prediction-form" id="prediction-form">
+            <div class="group-form">
+                <label class="label-form" for="age">Age (Years):</label>
+                <input class="input-form" type="number" id="age" name="age" placeholder="30" required maxlength="3" />
+            </div>
+            <div class="group-form">
+                <label class="label-form" for="height">Height (Inches):</label>
+                <input class="input-form" type="number" id="height" name="height" placeholder="60" required
+                    maxlength="4" />
+            </div>
+            <div class="group-form">
+                <label class="label-form" for="weight">Weight (Pounds):</label>
+                <input class="input-form" type="number" id="weight" name="weight" placeholder="150" required
+                    maxlength="4" />
+            </div>
+            <div class="group-form">
+                <label class="label-form" for="ap_hi">Systolic Blood Pressure:</label>
+                <input class="input-form" type="number" id="ap_hi" name="ap_hi" placeholder="120" required
+                    maxlength="3" />
+            </div>
+            <div class="group-form">
+                <label class="label-form" for="ap_lo">Diastolic Blood Pressure:</label>
+                <input class="input-form" type="number" id="ap_lo" name="ap_lo" placeholder="80" required
+                    maxlength="3" />
+            </div>
+            <div class="group-form">
+                <label class="label-form" for="gender">Sex Assigned At Birth:</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" id="male" name="gender" value="2" required />Male
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" id="female" name="gender" value="1" required />Female
+                    </label>
+                </div>
+            </div>
+            <div class="group-form">
+                <label class="label-form" for="cholesterol">Cholesterol Level:</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" id="cholesterol_normal" name="cholesterol" value="1" required />Normal (less
+                        than 200 mg/dL)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" id="cholesterol_above_normal" name="cholesterol" value="2"
+                            required />Slightly Elevated (200-239 mg/dL)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" id="cholesterol_well_above_normal" name="cholesterol" value="3"
+                            required />High (240 mg/dL and above)
+                    </label>
+                </div>
+            </div>
+            <div class="group-form">
+                <label class="label-form" for="gluc">Glucose Level:</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" id="glucose_normal" name="gluc" value="1" required />Normal (less than
+                        100 mg/dL)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" id="glucose_above_normal" name="gluc" value="2" required />Slightly
+                        Elevated (100-125 mg/dL)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" id="glucose_well_above_normal" name="gluc" value="3" required />High (126
+                        mg/dL and above)
+                    </label>
+                </div>
+            </div>
+            <div class="group-form">
+                <label class="label-form" for="smoke">Smoking Status:</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" id="smoke_no" name="smoke" value="0" required />No
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" id="smoke_yes" name="smoke" value="1" required />Yes
+                    </label>
+                </div>
+            </div>
+            <div class="group-form">
+                <label class="label-form" for="alco">Alcohol Consumption:</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" id="alcohol_no" name="alco" value="0" required />No
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" id="alcohol_yes" name="alco" value="1" required />Yes
+                    </label>
+                </div>
+            </div>
+            <div class="group-form">
+                <label class="label-form" for="active">Regular Exercise:</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" id="active_no" name="active" value="0" required />No
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" id="active_yes" name="active" value="1" required />Yes
+                    </label>
+                </div>
+            </div>
+            <div>
+                <p class="form-note">
+                    <strong>MEDICAL DISCLAIMER:</strong> This cardiovascular disease prediction tool is for educational
+                    and demonstration purposes only. It is NOT intended to provide medical advice, diagnosis, or
+                    treatment recommendations. This tool should only be used with fictional patient data for learning
+                    purposes.
+                    <br><br>
+                    <strong>DO NOT use this tool for actual medical decisions.</strong> Always consult with qualified
+                    healthcare professionals for medical advice, diagnosis, and treatment of cardiovascular conditions.
+                    The predictions generated by this tool are not a substitute for professional medical judgment and
+                    should never be used to make healthcare decisions.
+                    <br><br>
+                    By using this tool, you acknowledge that it is for educational purposes only and not for real
+                    medical use.
+                </p>
+            </div>
+            <div class="group-form">
+                <button class="button-submit" type="submit">Make A Prediction</button>
+            </div>
+            <div class="group-form">
+                <div class="prediction-result" id="prediction-result">
+                    2
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="predict.js"></script>
+</body>
+
+</html>
