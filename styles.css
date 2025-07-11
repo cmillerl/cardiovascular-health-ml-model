@@ -145,3 +145,31 @@ input[type="radio"] {
     margin-top: 20px;
     font-weight: bolder;
 }
+
+/* ===== CHECKBOX ===== */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+    color: var(--text-color);
+    cursor: pointer;
+    background-color: #fff3cd;
+    border: 2px solid var(--quaternary-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--primary-color);
+}
+
+.checkbox-form {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: var(--quaternary-color);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
