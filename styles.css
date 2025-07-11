@@ -1,3 +1,4 @@
+/* ===== CSS VARIABLES ===== */
 :root {
     --primary-color: #2b2d42ff;
     --secondary-color: #8d99aeff;
@@ -8,6 +9,7 @@
     --font-family: 'Roboto', sans-serif;
 }
 
+/* ===== BASE STYLES ===== */
 body {
     font-family: var(--font-family);
     color: var(--text-color);
@@ -17,6 +19,7 @@ body {
     line-height: 1.6;
 }
 
+/* ===== TYPOGRAPHY ===== */
 .titles {
     color: var(--primary-color);
     font-size: 32px;
@@ -25,6 +28,7 @@ body {
     font-weight: 700;
 }
 
+/* ===== FORM CONTAINER ===== */
 .prediction-form {
     max-width: 800px;
     margin: 0 auto;
@@ -34,6 +38,7 @@ body {
     border: 1px solid var(--secondary-color);
 }
 
+/* ===== FORM ELEMENTS ===== */
 .label-form {
     display: block;
     margin: 10px;
@@ -65,7 +70,7 @@ body {
     margin-bottom: 0;
 }
 
-/* Radio button styling */
+/* ===== RADIO BUTTONS ===== */
 input[type="radio"] {
     margin-right: 8px;
     cursor: pointer;
@@ -100,7 +105,7 @@ input[type="radio"] {
     margin-top: 8px;
 }
 
-/* Medical disclaimer styling */
+/* ===== MEDICAL DISCLAIMER ===== */
 .form-note {
     background-color: #fff3cd;
     border: 2px solid var(--quaternary-color);
@@ -117,6 +122,7 @@ input[type="radio"] {
     font-weight: 700;
 }
 
+/* ===== BUTTONS ===== */
 .button-submit {
     background-color: var(--quinary-color);
     color: white;
@@ -134,6 +140,7 @@ input[type="radio"] {
     opacity: 0.8;
 }
 
+/* ===== RESULTS DISPLAY ===== */
 .prediction-result {
     margin-top: 20px;
     font-weight: bolder;
