@@ -22,6 +22,16 @@ A predictive machine learning model that predicts cardiovascular disease risk in
     POST /predict 
     (submit patient data and receive a prediction from the cardiovascular disease prediction machine learning model)
 
+## Model Performance
+
+**Precision**: 73% (weighted avg.)
+
+**Recall**: 73% (weighted avg.)
+
+**F1 Score**: 73% (weighted avg.)
+
+**Accuracy**: 73.1%
+
 ## Requirements To Run Locally
 
     - Python 3.13+
@@ -36,6 +46,50 @@ A predictive machine learning model that predicts cardiovascular disease risk in
     - py -m pip install flask
     - py -m pip install flask-cors
     - py -m pip install joblib
+
+## Installation
+
+1. **Clone the repository to your IDE**
+
+        git clone https://github.com/cmillerl/cardiovascular-health-ml-model
+
+2. **Install the latest version of Python with pip**
+
+        https://www.python.org/downloads/
+
+3. **Install the required Python packages**
+
+        py -m pip install pandas flask flask-cors joblib scikit-learn
+
+4. **Ensure the four data files exist if you want to run the full-stack application locally**
+
+        data/cardiovascular_model.pkl
+    
+        data/cardiovascular-data.csv
+    
+        data/scaler.pkl
+    
+        data/statistics.json
+
+5. **If the data files don't exist**
+
+        py main.py
+
+6. **If the data files exist**
+
+        Launch the back-end: py app.py
+    
+        Launch the front-end with an extension such as Live Server
+
+        Front-end: http://localhost:8080/index.html
+    
+        Back-end API: http://localhost:5000/
+
+7. **To get a prediction**
+
+        All form fields must contain an integer (strings, floating points, and blank fields will cause an error)
+
+        The checkbox ensuring you understand the medical disclaimer must be checked before making a prediction
 
 
 

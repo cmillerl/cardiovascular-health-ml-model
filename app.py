@@ -1,7 +1,7 @@
 """
 Usage: py app.py
 
-Flask back-end REST API for cardiovascular disease prediction
+Flask back-end REST API for cardiovascular disease prediction.
 
 API endpoints:
 - GET / - Returns a welcome message
@@ -13,8 +13,8 @@ from flask_cors import CORS
 from ml_model import MachineLearningModel
 import pandas as pd
 
-# Initialize Flask app and machine learning model
-# CORS is used to allow cross-origin requests
+# Initialize Flask app and machine learning model.
+# CORS is used to allow cross-origin requests.
 app = Flask(__name__)
 CORS(app)
 ml = MachineLearningModel()
@@ -33,7 +33,7 @@ def index():
 @app.route("/predict", methods=["POST"])
 def predict():
     """
-    Predict cardiovascular disease risk based on patient data
+    Predict cardiovascular disease risk based on patient data.
 
     Expects the following form data:
 
@@ -54,28 +54,30 @@ def predict():
     """
 
     try:
-        # Extract user input from the request form
-        # Convert form data to a list of floats
-        # Ensure the form keys match the expected input features
-        userInput = [
-            float(request.form[k])
-            for k in [
-                "age",
-                "gender",
-                "height",
-                "weight",
-                "ap_hi",
-                "ap_lo",
-                "cholesterol",
-                "gluc",
-                "smoke",
-                "alco",
-                "active",
-            ]
-        ]
+        # Extract user input from the request form.
+        # Convert form data to a list of floats.
+        # Ensure the form keys match the expected input features.
+        userInput = []
+        for k in [
+            "age",
+            "gender",
+            "height",
+            "weight",
+            "ap_hi",
+            "ap_lo",
+            "cholesterol",
+            "gluc",
+            "smoke",
+            "alco",
+            "active",
+        ]:
+            if k == "height":
+                userInput.append(float(request.form[k]) / 12)  # Convert inches to feet.
+            else:
+                userInput.append(float(request.form[k]))
 
-        # Define the feature names and create a DataFrame for prediction
-        # The feature names must match the model's expected input
+        # Define the feature names and create a DataFrame for prediction.
+        # The feature names must match the model's expected input.
         featureNames = [
             "age",
             "gender",
@@ -90,24 +92,24 @@ def predict():
             "active",
         ]
 
-        # Create a DataFrame with the user input
-        # The DataFrame must have the same structure as the training data used for the model
+        # Create a DataFrame with the user input.
+        # The DataFrame must have the same structure as the training data used for the model.
         inputDF = pd.DataFrame([userInput], columns=featureNames)
 
-        # Make a prediction using the trained machine learning model
-        # 0 for Low Risk, 1 for High Risk
+        # Make a prediction using the trained machine learning model.
+        # 0 for Low Risk, 1 for High Risk.
         prediction = ml.makePrediction(inputDF)
 
-        # Convert the numerical prediction to a string
-        # Return the prediction result as a JSON response
+        # Convert the numerical prediction to a string.
+        # Return the prediction result as a JSON response.
         return jsonify({"prediction": "High Risk" if prediction != 0 else "Low Risk"})
 
     except Exception as e:
-        # Handle and log any errors that occur during prediction
+        # Handle and log any errors that occur during prediction.
         print("🔥 Prediction error:", e)
         return jsonify({"error": str(e)}), 500
 
 
 if __name__ == "__main__":
-    # Runs the Flask app on port 5000 with debug mode enabled
+    # Runs the Flask app on port 5000 with debug mode enabled.
     app.run(debug=True, port=5000)
