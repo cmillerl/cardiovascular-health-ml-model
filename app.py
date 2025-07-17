@@ -8,7 +8,7 @@ API endpoints:
 - POST /predict - Submit patient data and receive a prediction from the cardiovascular disease prediction machine learning model
 """
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from ml_model import MachineLearningModel
 import pandas as pd
@@ -25,9 +25,16 @@ def index():
     """
     Welcome endpoint for the REST API
 
-    - GET / - Returns a welcome message
+    - GET / - Returns the main HTML page.
     """
-    return "Welcome to the Cardiovascular Disease Prediction API"
+    return send_from_directory(".", "index.html")
+
+@app.route("/<path:filename>", methods=["GET"])
+def serve_static(filename):
+    """
+    Serve static files (CSS, JS, etc.)
+    """
+    return send_from_directory('.', filename)
 
 
 @app.route("/predict", methods=["POST"])
