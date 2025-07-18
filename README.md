@@ -59,7 +59,7 @@ A predictive machine learning model that predicts cardiovascular disease risk in
 
 3. **Install the required Python packages**
 
-        py -m pip install pandas flask flask-cors joblib scikit-learn
+        py -m pip install pandas flask flask-cors joblib scikit-learn matplotlib seaborn
 
 4. **Ensure the four data files exist if you want to run the full-stack application locally**
 
@@ -87,9 +87,13 @@ A predictive machine learning model that predicts cardiovascular disease risk in
 
 7. **To get a prediction**
 
-        All form fields must contain an integer (strings, floating points, and blank fields will cause an error)
+        All form fields must contain an integer. (Strings, floating points, and blank fields will cause an error.)
 
-        The checkbox ensuring you understand the medical disclaimer must be checked before making a prediction
+        All radio buttons must have one option selected.
+
+        The medical disclaimer checkbox must be checked before making a prediction.
+
+        Click "Make A Prediction" to receive a binary outcome. Low or High Risk of CVD.
 
 
 
