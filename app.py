@@ -109,7 +109,7 @@ def predict():
 
         # Convert the numerical prediction to a string.
         # Return the prediction result as a JSON response.
-        return jsonify({"prediction": "High Risk" if prediction != 0 else "Low Risk"})
+        return jsonify({"prediction": "High Risk of CVD" if prediction != 0 else "Low Risk of CVD"})
 
     except Exception as e:
         # Handle and log any errors that occur during prediction.

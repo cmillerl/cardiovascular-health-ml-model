@@ -9,7 +9,9 @@
 </head>
 
 <body>
-    <h1 class="titles">Cardiovascular Disease Predictor</h1>
+    <div class="container-title">
+        <h1 class="titles">Cardiovascular Disease Risk Predictor</h1>
+    </div>
     <div class="container-form">
         <form class="prediction-form" id="prediction-form">
             <div class="group-form">
@@ -37,7 +39,7 @@
                     maxlength="3" />
             </div>
             <div class="group-form">
-                <label class="label-form" for="gender">Sex Assigned At Birth:</label>
+                <label class="label-form" for="gender">Biological Sex:</label>
                 <div class="radio-group">
                     <label class="radio-label">
                         <input type="radio" id="male" name="gender" value="2" required />Male
@@ -82,7 +84,7 @@
                 </div>
             </div>
             <div class="group-form">
-                <label class="label-form" for="smoke">Smoking Status:</label>
+                <label class="label-form" for="smoke">Do You Smoke:</label>
                 <div class="radio-group">
                     <label class="radio-label">
                         <input type="radio" id="smoke_no" name="smoke" value="0" required />No
@@ -93,7 +95,7 @@
                 </div>
             </div>
             <div class="group-form">
-                <label class="label-form" for="alco">Alcohol Consumption:</label>
+                <label class="label-form" for="alco">Do You Drink Alcohol:</label>
                 <div class="radio-group">
                     <label class="radio-label">
                         <input type="radio" id="alcohol_no" name="alco" value="0" required />No
@@ -104,7 +106,7 @@
                 </div>
             </div>
             <div class="group-form">
-                <label class="label-form" for="active">Regular Exercise:</label>
+                <label class="label-form" for="active">Do You Regularly Exercise:</label>
                 <div class="radio-group">
                     <label class="radio-label">
                         <input type="radio" id="active_no" name="active" value="0" required />No
@@ -141,9 +143,7 @@
                 <button class="button-submit" type="submit">Make A Prediction</button>
             </div>
             <div class="group-form">
-                <div class="prediction-result" id="prediction-result">
-
-                </div>
+                <div class="prediction-result" id="prediction-result"></div>
             </div>
         </form>
     </div>
